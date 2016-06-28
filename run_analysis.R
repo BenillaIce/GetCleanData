@@ -49,7 +49,7 @@ data<-data[,idx]
 #### Create second tidy data set
 
 # aggregate -function allows grouped statistics
-tidydata<-aggregate(data[,1:(ncol(data)-2)],list(data$activity,data$subject),mean, na.action=na.omit)
+tidydata<-aggregate(data[,1:(ncol(data)-2)],list(data$actname,data$subject),mean, na.action=na.omit)
 
 # create column names for the grouping variables in the resulting data frame
 names(tidydata)[1:2]<-c('activity','subject')
